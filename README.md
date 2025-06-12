@@ -326,3 +326,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Happy Task Managing! 📝✅**
+
+**Commands for Context7,TaskManager,Sequential-Thinking MCP`s**
+-  `npx -y @upstash/context7-mcp@latest`
+-  `npx -y @kazuph/mcp-taskmanager`
+-  `npx -y @modelcontextprotocol/server-sequential-thinking`

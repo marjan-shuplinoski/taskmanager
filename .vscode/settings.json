@@ -1,9 +1,21 @@
 {
   "mcp": {
+    "inputs": [],
     "servers": {
-      "context7": {
-        "type": "http",
-        "url": "https://mcp.context7.com/mcp"
+      "Context7": {
+        "type": "stdio",
+        "command": "npx",
+        "args": [
+          "-y",
+          "@upstash/context7-mcp@latest"
+        ]
+      },
+      "taskmanager": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@kazuph/mcp-taskmanager"
+        ]
       },
       "sequential-thinking": {
         "command": "npx",
@@ -12,12 +24,6 @@
           "@modelcontextprotocol/server-sequential-thinking"
         ]
       }
-    }
-  },
-  "tools": {
-    "taskmanager": {
-      "command": "npx",
-      "args": ["-y", "@kazuph/mcp-taskmanager"]
     }
   }
 }
