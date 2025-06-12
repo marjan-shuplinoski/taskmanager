@@ -1,0 +1,12 @@
+{
+  "info": {
+    "name": "Categories API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    { "name": "Get All Categories", "request": { "method": "GET", "url": "{{baseUrl}}/api/v1/categories" } },
+    { "name": "Create Category", "request": { "method": "POST", "url": "{{baseUrl}}/api/v1/categories" } },
+    { "name": "Update Category", "request": { "method": "PUT", "url": "{{baseUrl}}/api/v1/categories/:id" } },
+    { "name": "Delete Category", "request": { "method": "DELETE", "url": "{{baseUrl}}/api/v1/categories/:id" } }
+  ]
+}

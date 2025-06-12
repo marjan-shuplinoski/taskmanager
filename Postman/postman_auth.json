@@ -1,0 +1,13 @@
+{
+  "info": {
+    "name": "Auth API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    { "name": "Register", "request": { "method": "POST", "url": "{{baseUrl}}/api/v1/auth/register" } },
+    { "name": "Login", "request": { "method": "POST", "url": "{{baseUrl}}/api/v1/auth/login" } },
+    { "name": "Logout", "request": { "method": "POST", "url": "{{baseUrl}}/api/v1/auth/logout" } },
+    { "name": "Me", "request": { "method": "GET", "url": "{{baseUrl}}/api/v1/auth/me" } },
+    { "name": "Update Profile", "request": { "method": "PUT", "url": "{{baseUrl}}/api/v1/auth/updateprofile" } }
+  ]
+}

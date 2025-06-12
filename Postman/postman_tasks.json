@@ -1,0 +1,14 @@
+{
+  "info": {
+    "name": "Tasks API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    { "name": "Get All Tasks", "request": { "method": "GET", "url": "{{baseUrl}}/api/v1/tasks" } },
+    { "name": "Get Task By Id", "request": { "method": "GET", "url": "{{baseUrl}}/api/v1/tasks/:id" } },
+    { "name": "Create Task", "request": { "method": "POST", "url": "{{baseUrl}}/api/v1/tasks" } },
+    { "name": "Update Task", "request": { "method": "PUT", "url": "{{baseUrl}}/api/v1/tasks/:id" } },
+    { "name": "Delete Task", "request": { "method": "DELETE", "url": "{{baseUrl}}/api/v1/tasks/:id" } },
+    { "name": "Update Task Status", "request": { "method": "PATCH", "url": "{{baseUrl}}/api/v1/tasks/:id/status" } }
+  ]
+}

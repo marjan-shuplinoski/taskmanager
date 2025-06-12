@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "Review server.js code",
+			"command": "npx eslint backend/server.js --fix && npx prettier --write backend/server.js",
+			"group": "build",
+			"problemMatcher": [
+				"$eslint-stylish"
+			],
+			"args": []
+		}
+	]
+}
