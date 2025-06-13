@@ -6,7 +6,7 @@ import bcrypt from 'bcryptjs';
 const registerSchema = Joi.object({
   name: Joi.string().min(2).max(50).required(),
   email: Joi.string().email().required(),
-  password: Joi.string().min(8).required(),
+  password: Joi.string().min(5).required(),
 });
 
 export const register = async (req, res) => {
@@ -41,7 +41,7 @@ export const register = async (req, res) => {
 
 const loginSchema = Joi.object({
   email: Joi.string().email().required(),
-  password: Joi.string().min(8).required(),
+  password: Joi.string().min(5).required(),
 });
 
 export const login = async (req, res) => {
