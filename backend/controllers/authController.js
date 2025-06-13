@@ -79,3 +79,11 @@ export const login = async (req, res) => {
     res.status(500).json({ message: 'Server error' });
   }
 };
+
+export const logout = (req, res) => {
+  // If using JWT in HttpOnly cookie:
+  res.clearCookie('token', { httpOnly: true, sameSite: 'strict', secure: process.env.NODE_ENV === 'production' });
+  return res.status(200).json({ message: 'Logout successful' });
+  // If using stateless JWT (no cookie), just return success:
+  // return res.status(200).json({ message: 'Logout successful' });
+};

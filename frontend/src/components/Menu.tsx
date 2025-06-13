@@ -11,9 +11,16 @@ const Menu = () => {
   const navigate = useNavigate();
   const onDashboard = location.pathname === '/dashboard' || location.pathname === '/';
 
-  const handleLogout = () => {
-    // TODO: clear auth state/cookie if implemented
-    navigate('/login');
+  const handleLogout = async () => {
+    try {
+      await fetch('/api/v1/auth/logout', { method: 'POST', credentials: 'include' });
+      // Clear local auth state if using context or localStorage
+      localStorage.removeItem('token');
+      navigate('/login');
+    } catch (err) {
+      // Optionally show error notification
+      navigate('/login');
+    }
   };
 
   return (
