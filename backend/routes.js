@@ -1,9 +1,10 @@
 import { Router } from 'express';
+import { register } from './controllers/authController.js';
 
 const router = Router();
 
 // Auth endpoints
-router.post('/auth/register', (req, res) => res.send('register'));
+router.post('/auth/register', register);
 router.post('/auth/login', (req, res) => res.send('login'));
 router.post('/auth/logout', (req, res) => res.send('logout'));
 router.get('/auth/me', (req, res) => res.send('me'));
