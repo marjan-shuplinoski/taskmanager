@@ -15,9 +15,11 @@
         "args": [
           "-y",
           "@kazuph/mcp-taskmanager"
-        ]
+        ],
+        "type": "stdio"
       },
       "sequential-thinking": {
+        "type": "stdio", // Added for consistency; optional if not required by your extension
         "command": "npx",
         "args": [
           "-y",
