@@ -2,6 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import routes from './routes.js';
 import cors from 'cors';
+import rateLimit from 'express-rate-limit';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -14,6 +15,17 @@ app.use(cors({
   credentials: true,
 }));
 app.use(express.json());
+
+// Rate limiting middleware
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // limit each IP to 100 requests per windowMs
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: 'Too many requests, please try again later.'
+});
+
+app.use(limiter);
 
 // MongoDB connection
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/taskmaster')
