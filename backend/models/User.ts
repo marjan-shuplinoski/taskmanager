@@ -7,6 +7,7 @@ export interface IUser extends Document {
   password: string;
   avatar?: string;
   preferences?: Record<string, any>;
+  role?: 'user' | 'admin';
   createdAt: Date;
   updatedAt: Date;
   comparePassword(candidatePassword: string): Promise<boolean>;
