@@ -25,6 +25,14 @@
           "-y",
           "@modelcontextprotocol/server-sequential-thinking"
         ]
+      },
+      "github-remote": {
+        "type": "http",
+        "url": "https://api.githubcopilot.com/mcp/"
+      },
+      "puppeteer": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-puppeteer"]
       }
     }
   }
